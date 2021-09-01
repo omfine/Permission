@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 权限请求页面。
+ * Page for permission request。
  * @author E
  */
 public class PermissionRequestActivity extends Activity {
@@ -58,15 +58,15 @@ public class PermissionRequestActivity extends Activity {
 
                 boolean shouldShowRequestPermissionRationale = PermissionRequestHelper.shouldShowRequestPermissionRationale(this , permission);
                 if (shouldShowRequestPermissionRationale){
-                    //拒绝了，但是下次请求，系统还会再次提示
+                    //denied , but will remind again when request
                     deniedWithRemindList.add(permission);
                 }else {
-                    //拒绝，并选择了，下次不再提醒 , 这种情况，只能跳转到应用详情页面，手动去开启权限
+                    //denied and will not remind again when request , only way is to open app detail page.
                     deniedWithoutRemindList.add(permission);
                 }
                 log("============================onRequestPermissionsResult=======2=======: " + permission + "  -  " + shouldShowRequestPermissionRationale);
             }else {
-                //已允许的权限
+                //granted permission
                 grantedPermissions.add(permission);
             }
         }

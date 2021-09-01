@@ -1,7 +1,7 @@
 package com.omfine.utils.permission.ext;
 
 import android.app.Activity;
-
+import androidx.core.app.ActivityCompat;
 import java.util.ArrayList;
 
 public class PermissionRequestHelper {
