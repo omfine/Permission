@@ -3,12 +3,9 @@ package com.omfine.utils.permission.main;
 import android.Manifest;
 import android.os.Bundle;
 import android.util.Log;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.omfine.utils.permission.ext.OnPermissionRequestResultListener;
 import com.omfine.utils.permission.ext.PermissionHelper;
-
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -28,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 @Override
                 public void onGranted() {
-
+                    Log.e("permission" , "=======onGranted=======");
                 }
             });
 
